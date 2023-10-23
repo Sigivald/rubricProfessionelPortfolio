@@ -1,0 +1,485 @@
+body {
+  background-color: #2D2C2C;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow";
+  /* font-family: 'Azonix', sans-serif; */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+}
+
+/* header------------------------------------------------------------------------------------------------- */
+header {
+  /* background-color: #9eb7d5; */
+  background-image: url(../svg/Path\ 24.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  margin: 0;
+  padding: 0;
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5.355rem;
+
+  z-index: 2;
+}
+#icon {
+  grid-column: 3 / span 1;
+
+  font-family: "Azonix", sans-serif;
+  background-color: #4d4d4d;
+  color: #f9cd46;
+
+  border-radius: 50%;
+  margin: auto;
+  padding: 0.8rem 0.5rem;
+}
+.navOptions {
+  grid-column: 8 / span 6;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+.navOptions > li {
+  display: inline;
+  text-decoration: none;
+  margin: auto;
+}
+
+.navOptions > li:hover{
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Main---------------------------------------------------------------------------------------------------------- */
+/* Introduction-------------------------------------------------------------------------------------------------- */
+#introduction {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+#introductionImg {
+  grid-column: 3 / span 4;
+}
+
+#introductionImg > img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+
+  background-color: #9eb7d5;
+
+  height: auto;
+}
+
+#introductionText {
+  grid-column: 8 / span 6;
+  grid-row: 1 / span 2;
+
+  font-family: "Azonix", bold;
+  color: white;
+}
+
+#introductionText > article {
+  margin-bottom: 4rem;
+}
+
+.introductionName {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0.5rem;
+}
+
+.introductionName::first-letter {
+  color: #f9cd46;
+}
+
+#introductionText2 {
+  font-size: 2rem;
+}
+
+#introductionText3 {
+  font-size: 1.2rem;
+}
+
+#workAndLocation {
+  grid-column: 3 / span 4;
+  grid-row: 2;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.workAndLocationBox {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  row-gap: 1rem;
+
+  background-color: #9eb7d5;
+}
+
+.workAndLocationBox > p {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.2rem;
+
+  text-align: center;
+  font-family: "Azonix", sans-serif;
+}
+
+.workAndLocationBox > i {
+  margin: auto;
+}
+
+.dot {
+  height: 1rem;
+  width: 1rem;
+  display: block;
+  background-color: #20e749;
+  border-radius: 50%;
+  margin: auto;
+}
+
+#downArrow {
+  grid-column: 7 / span 2;
+  grid-row: 3;
+
+  text-align: center;
+  color: white;
+
+  margin-top: 1rem;
+}
+
+/* aboutMe-------------------------------------------------------------------------------------------- */
+#aboutMe {
+  column-gap: 2rem;
+
+  background-image: url(../svg/Path\ 20.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#aboutMe > h2 {
+  grid-column: 7 / span 2;
+  grid-row: 1;
+
+  margin-top: 4.5rem;
+
+  text-align: center;
+  font-family: "Azonix", bold;
+}
+
+#hvemErJeg {
+  grid-column: 2 / span 4;
+  grid-row: 2;
+
+  margin-bottom: 1.5rem;
+}
+
+#hvemErJeg > h3 {
+  text-align: center;
+  font-family: "Azonix", bold;
+}
+
+#minPersonlighed {
+  grid-column: 6 / span 4;
+  grid-row: 2;
+}
+
+#minPersonlighed > h3 {
+  text-align: center;
+  font-family: "Azonix", bold;
+}
+
+#mineKompetencer {
+  grid-column: 10 / span 4;
+  grid-row: 2;
+}
+
+#mineKompetencer > h3 {
+  text-align: center;
+  font-family: "Azonix", bold;
+}
+
+/* Portfolio------------------------------------------------------------------------------------------------------------- */
+#portfolio {
+  margin: 4rem 0 4rem 0;
+}
+
+#portfolio > h2 {
+  grid-column: 7 / span 2;
+
+  text-align: center;
+  font-family: "Azonix", "bold";
+  color: white;
+}
+
+.portfolioCases {
+  grid-column: 2 / span 12;
+  grid-row: 2;
+
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 2rem;
+}
+
+.portfolioCases > a > article > img {
+  width: 20rem;
+
+  height: 15rem;
+}
+
+.portfolioCases > a {
+  color: white;
+}
+
+.hide {
+  opacity: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  padding: 0;
+}
+
+.portfolioCaseContainer {
+  position: relative;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.portfolioCaseContainer:hover {
+  transform: scale(1.1);
+}
+
+.portfolioCaseContainer:hover .portfolioCaseImg {
+  opacity: 0.3;
+}
+
+.portfolioCaseContainer:hover .hide {
+  opacity: 1;
+}
+
+/* skills----------------------------------------------------------------------------------------------------------------- */
+#Skills {
+  background-image: url(../svg/Path\ 21.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-bottom: 4rem;
+}
+
+#Skills > h2 {
+  grid-column: 6 / span 4;
+
+  text-align: center;
+  font-family: "Azonix", "bold";
+
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.skillContainer {
+  grid-column: 4 / span 8;
+  grid-row: 2;
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  row-gap: 4rem;
+
+  text-align: center;
+}
+
+.skillConCard {
+  background-color: #4d4d4d;
+
+  width: 12rem;
+  height: 12rem;
+}
+
+.skillConCard:hover {
+  transform: scale(1.1);
+}
+
+.skillConCard:hover .skillImg {
+  opacity: 0.3;
+}
+
+.skillConCard:hover .skillTitle {
+  opacity: 0.3;
+}
+
+.skillConCard:hover .hide {
+  opacity: 1;
+}
+
+.skillConCard > svg {
+  padding-top: 2rem;
+  margin: auto;
+}
+
+.skillConCard > p {
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+
+  color: white;
+  font-family: "Azonix", "sans-serif";
+}
+
+/* singleOverview--------------------------------------------------------------------------------------- */
+.return{
+  grid-column: 1 / span 14;
+  grid-row: 1;
+
+  position: fixed;
+
+  width: 100%;
+  height: 3.5rem;
+  background-color: #9eb7d5;
+}
+
+.return > a {
+  grid-column: 1 / span 2;
+  margin: auto;
+
+  color: #2D2C2C;
+}
+
+.return > a:hover {
+  transform: scale(1.2);
+}
+
+#caseOverview > h1 {
+  grid-column: 2 / span 3;
+  grid-row: 2;
+
+  font-family: "Azonix", "bold";
+  color: white;
+
+  margin-top: 5rem;
+}
+
+#caseOverview > h3 {
+  grid-column: 2 / span 3;
+  grid-row: 3;
+
+  font-family: "Azonix", sans-serif;
+  color: white;
+}
+
+/* section type one------------------------------------------------------------------------------------------- */
+.typeOneSection {
+  background-image: url(../svg/Path\ 23.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  column-gap: 2rem;
+}
+
+.typeOneSection > .textForCase {
+  grid-column: 2 / span 6;
+}
+
+.typeOneSection > .imgForCase {
+  grid-column: 8 / span 6;
+}
+
+.imgForCase, .textForCase{
+    margin-top: 6rem;
+    margin-bottom: 3.2rem;
+}
+
+.imgForCase > img {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: contain;
+  object-position: center;
+}
+
+.textForCase > h4{
+    margin: 0;
+}
+
+/* section type two---------------------------------------------------------------------------------------------- */
+.typeTwoSection {
+    height: 30rem;
+
+    column-gap: 2rem;
+
+    color: white;
+  }
+  
+  .typeTwoSection > .textForCase {
+      grid-column: 8 / span 6;
+      
+      margin-top: 6rem;
+    }
+    
+    .typeTwoSection > .imgForCase {
+      grid-column: 2 / span 6;
+  
+    margin-top: 6rem;
+  }
+  
+
+/* footer--------------------------------------------------------------------------------------------------------------- */
+footer {
+  background-image: url(../svg/Path\ 22.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* margin-top: 4rem; */
+}
+
+footer > h2 {
+  grid-column: 6 / span 4;
+
+  text-align: center;
+  font-family: "Azonix", "bold";
+
+  margin-top: 6rem;
+}
+
+footer > h3 {
+  grid-column: 5 / span 6;
+
+  text-align: center;
+  font-family: "Barlow";
+
+}
+
+#infoFlex {
+  grid-column: 3 / span 10;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  font-family: "Azonix", "sans-serif";
+
+  margin-bottom: 2rem;
+}
+
+#infoFlex > a {
+  color: black;
+  text-decoration: none;
+}
+
+#infoFlex > a:hover{
+  transform: scale(1.1);
+}
